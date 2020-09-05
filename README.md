@@ -8,14 +8,14 @@ The main focus is supporting searching the image repository using both query str
 ## Usage
 We will a small subset of the iris flower dataset to show off some features. This contains a mix of daisy, dandelion, rose, sunflower and tulip pictures :)
 
-```bash
+```terminal
 python ImageRepoView.py /path/to/folder/with/images
 Building image repository and clustering images for searching, wait a few moments...
 ```
 
 Upon startup, all the images in the passed in folder */path/to/folder/with/images* are clustered (KMeans) using their pixel values such that they can be efficiently searched against.
 
-```bash
+```terminal
 Type "search text" to search within the current view of the image repository
 Type "search images" to search within the current view of the image repository
 Type "return" to get back to the previous search result
@@ -30,7 +30,7 @@ Type "return home" to get back to the original image repository
 
 **return home**: Return to the original view of the image repository
 
-```bash
+```terminal
 $ search text
 Type the query text string you wish to search with
 $ tulip
@@ -43,7 +43,7 @@ You are now in a view of the repository containing only the above search results
 
 As we can see, we found some images with filenames containing tulip. Also, notice that we are now within the search results, so we can perform another search to find a specific tulip.
 
-```bash
+```terminal
 $ search text
 Type the query text string you wish to search with
 $ c21b68910e_n
@@ -56,7 +56,7 @@ You are now in a view of the repository containing only the above search results
 
 Now, let's zoom back out and return to the original repository. We will do this using "return home", however note that using "return" twice would accomplish the same thing.
 
-```bash
+```terminal
 $ return home
 At original image repository.
 ```
@@ -64,9 +64,9 @@ At original image repository.
 Now, for something cool let's consider if we wanted to search our image repository purely using a query picture, and our repository of pictures (not using any labelling).
 This can be thought of like a google image search, except you pass in a photo as your search query instead of text. 
 We'll use a sunflower picture from our dataset:
- ![alt text](/IrisDataVerySmall/sunflower_16975010069_7afd290657_m.jpg?raw=true) and search it against the dataset, we should expect to get some sunflowers as search hits!
+![alt text](/IrisDataVerySmall/sunflower_16975010069_7afd290657_m.jpg?raw=true) and search it against the dataset, we should expect to get some sunflowers as search hits!
 
-```bash
+```terminal
 $ search images
 Type the path to the image you wish to search with
 $ /Users/anantmaheshwari/PycharmProjects/ImageRepo/IrisDataVerySmall/sunflower_16975010069_7afd290657_m.jpg
