@@ -11,6 +11,7 @@ def user_prompt():
     print("Type \"search images\" to search within the current view of the image repository")
     print("Type \"return\" to get back to the previous search result")
     print("Type \"return home\" to get back to the original image repository")
+    print("Type \"check for corruption\" to check whether any image in the current view has been corrupted")
 
 def image_repo_interface(model):
     user_prompt()
@@ -48,6 +49,9 @@ def image_repo_interface(model):
             while model.parent:
                 model = model.parent
             print("At original image repository.\n")
+            user_prompt()
+        elif line == 'check for corruption':
+            model.check_for_corruption()
             user_prompt()
         else:
             print("Command not recognized. Check your spelling :)")
