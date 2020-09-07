@@ -35,7 +35,7 @@ Type "check for corruption" to check whether any images in the current view of t
 **check for corruption**: Check if any image in the current view of the repository has been corrupted. This is achieved by computing a hash (XOR-based) of the image pixels at each level of the image repository,and comparing the current hash with the current level's hash to ensure the picture has not been modified.
 
 ```terminal
-$search text
+$ search text
 Type the query text string you wish to search with
 $ tulip
 Searching image repository based on inputted text query: tulip
